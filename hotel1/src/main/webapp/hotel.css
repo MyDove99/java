@@ -1,0 +1,15 @@
+* {
+    font-family: 'Dongle', sans-serif;
+    font-size: 25px;
+}
+table{
+    height: 500px;
+    width : 100%;
+}
+td{
+    text-align: left;
+    width: 33%;
+}
+#a3{
+    text-align: center;
+}
