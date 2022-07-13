@@ -1,0 +1,31 @@
+@charset "UTF-8";
+table{
+    border: 1px solid black;
+    text-align: center;
+}
+tr{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
+select{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background-size: cover;
+}
+body{
+    height: 100%;
+    vertical-align: middle;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 59%, rgba(255, 255, 255, 1) 100%), url('D:/ncs8/caffee/coffee-gc81367602_1920.jpg') no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 500px;
+}
+h1{
+    font-size: 60px;
+    background: linear-gradient(to right bottom,#8a2be2,#ffffff);
+    color: transparent;
+    -webkit-background-clip: text; 
+    
+}
