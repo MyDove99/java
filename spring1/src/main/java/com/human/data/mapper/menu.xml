@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.human.data.imenu">
+<select id="listmenu" resultType="com.human.data.menuDTO">
+	select * from cafe order by seqno
+</select>
+<select id="viewMenu" resultType="com.human.data.menuDTO">
+	select seqno,name,price from cafe where seqno=#{param1}
+</select>
+<insert id="insert">
+	insert into cafe values(sq.nextval,#{param1},#{param2})
+</insert>
+<delete id="delete">
+	delete from cafe where seqno=#{param1}
+</delete>
+<update id="update">
+	update menu set name=#{param1},price=#{param2} where seqno=#{param3}
+</update>
+</mapper>

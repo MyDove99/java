@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.human.data.iEmployee">
+<select id="listEmpLoyees" resultType="com.human.data.empDTO">
+	select employee_id,emp_name,salary,manager_id from employees order by emp_name
+</select>
+<select id="getMember" resultType="com.human.data.member">
+	select a.employee_id,a.emp_name,a.salary,b.emp_name manager_name,
+	to_char(a.hire_date,'YYYY-MM-DD') hire_date,a.email
+	from employees a, employees b
+	where a.employee_id=#{param1}
+	and a.manager_id=b.employee_id(+)
+</select>
+<select id="countMember" resultType="int">
+	select count(*) cnt from employees where manager_id=#{param1}
+</select>
+</mapper>
